@@ -1,4 +1,4 @@
-import ContactFrom from '@/components/Contact/contactFrom';
+import ContactFrom from '@/components/Contact/ContactFrom';
 import { ContactInstagramIcon, ContactLinkedinIcon, ContactMailIcon, ContactTwitterIcon, SocialIcon } from '@/components/icons';
 import React, { useState } from 'react';
 

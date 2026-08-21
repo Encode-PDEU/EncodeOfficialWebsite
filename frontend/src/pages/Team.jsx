@@ -35,33 +35,27 @@ const teamMembers = [
     type: "executives"
   },
   {
-    name: "Hritik Shah",
-    position: "AI/ML Head",
-    imgsrc: "/CommittePhotos/AIML/Hritik_Shah.jpg",
-    type: "Technical Heads"
-  },
-  {
-    name: "Dev Dobariya",
+    name: "Deep Jani",
     position: "Cloud & DevOps Head",
-    imgsrc: "/CommittePhotos/Cloud/Dev_Dobariya.jpg",
+    imgsrc: "/CommittePhotos/Cloud/DEEp.jpg",
     type: "Technical Heads"
   },
   {
-    name: "Parth Gurlani",
+    name: "Shreyansh",
     position: "Cloud & DevOps Head",
-    imgsrc: "/CommittePhotos/Cloud/Parth_Gurlani.jpg",
+    imgsrc: "/CommittePhotos/Cloud/shreyansh .jpg",
     type: "Technical Heads"
   },
   {
-    name: "Rishi Mehta",
+    name: "Aayush Parekh",
     position: "Web Development Head",
-    imgsrc: "/CommittePhotos/WebDev/Rishi_Mehta.jpeg",
+    imgsrc: "/CommittePhotos/WebDev/aayush.jpeg",
     type: "Technical Heads"
   },
   {
-    name: "Maitree Mistry",
+    name: "Preksha Patel",
     position: "Web Development Head",
-    imgsrc: "/CommittePhotos/WebDev/MaitreeM.jpg",
+    imgsrc: "/CommittePhotos/WebDev/Preksha_WebDev.jpeg",
     type: "Technical Heads"
   },
   {
@@ -77,21 +71,27 @@ const teamMembers = [
     type: "Technical Heads"
   },
   {
-    name: "Jaineel Hemnani",
+    name: "Vedant Bhalgama",
     position: "Cyber Security Head",
-    imgsrc: "/CommittePhotos/CyberSec/Jaineel_Hemnani.jpg",
+    imgsrc: "/CommittePhotos/CyberSec/vedant.jpeg",
     type: "Technical Heads"
   },
   {
-    name: "Rudra Patel",
+    name: "Dhyey Mendpara",
     position: "Cyber Security Head",
-    imgsrc: "/CommittePhotos/CyberSec/RUDRA_PATEL.jpg",
+    imgsrc: "/CommittePhotos/CyberSec/Dhyey_cybersec.jpeg",
     type: "Technical Heads"
   },
   {
-    name: "Hemil Bhanderi",
+    name: "Ansh Patel",
     position: "Game Development Head",
-    imgsrc: "/CommittePhotos/GameDev/HEMIL.jpg",
+    imgsrc: "/CommittePhotos/GameDev/ansh.JPG",
+    type: "Technical Heads"
+  },
+  {
+    name: "Devdeep Chauhan",
+    position: "Game Development Head",
+    imgsrc: "/CommittePhotos/GameDev/devdeep.JPG",
     type: "Technical Heads"
   },
   {
@@ -179,7 +179,7 @@ export function TeamCard({ imgsrc = "https://links.aryanranderiya.com/l/default_
   return (
     <div
       ref={cardRef}
-      className={`flex flex-col p-[2em] items-center gap-5 bg-[#00ff7b] bg-opacity-15 rounded-none z-[1] hover:translate-y-[-5px] w-[260px] transition-all outline-1 hover:outline outline-[#00ff7b] ${
+      className={`flex flex-col p-[2em] items-center gap-5 bg-[#00ff7b] bg-opacity-15 rounded-none z-[1] hover:translate-y-[-5px] w-full max-w-[260px] min-w-[150px] transition-all outline-1 hover:outline outline-[#00ff7b] ${
         visible ? "opacity-100" : "opacity-0"
       }`}
     >
@@ -239,7 +239,7 @@ export default function TeamPage() {
               aria-label={`Accordion ${index + 1}`}
               title={`${type.charAt(0).toUpperCase() + type.slice(1)} `}
             >
-              <div className="flex flex-wrap gap-3 md:max-w-[80vw] justify-center mb-4">
+              <div className={`flex gap-3 md:max-w-[80vw] justify-center mb-4 ${type === "executives" ? "flex-wrap sm:flex-nowrap" : "flex-wrap"}`}>
                 {members.map((member, idx) => (
                   <TeamCard
                     key={idx}
