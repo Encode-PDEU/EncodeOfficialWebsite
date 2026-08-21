@@ -3,33 +3,35 @@ import { useEffect, useRef, useState } from "react";
 
 const teamMembers = [
   {
-    name: "Axat Vaghela",
+    name: "Anoushka Aithal",
     position: "President",
-    imgsrc: "/CommittePhotos/Execs/Axat_Vaghela.jpeg",
-    type: "executives"
+    imgsrc: "/CommittePhotos/Execs/anoushka.jpg",
+    type: "executives",
+    scale: 1.35
   },
   {
-    name: "Nemil Shah",
+    name: "Laksh Parekh",
     position: "Vice President",
-    imgsrc: "/CommittePhotos/Execs/Nemil_Shah.jpeg",
+    imgsrc: "/CommittePhotos/Execs/laksh.jpg",
     type: "executives"
   },
   {
-    name: "Aayush Khandelwal",
+    name: "Aarav Patel",
     position: "Treasurer",
-    imgsrc: "/CommittePhotos/Execs/Aayush_Khandelwal.jpg",
-    type: "executives"
+    imgsrc: "/CommittePhotos/Execs/aarav.jpg",
+    type: "executives",
+    scale: 1.35
   },
   {
-    name: "Mokshal Shah",
+    name: "Hitarth Bhatt",
     position: "Above Tech Co-Ordinator",
-    imgsrc: "/CommittePhotos/Execs/Mokshal_Shah.jpeg",
+    imgsrc: "/CommittePhotos/Execs/Hitarth Bhatt.jpg",
     type: "executives"
   },
   {
-    name: "Parth Panot",
+    name: "Aditya",
     position: "Technical Co-Ordinator",
-    imgsrc: "/CommittePhotos/Execs/Parth_Panot.jpg",
+    imgsrc: "/CommittePhotos/Execs/aditya_techcoord.jpg",
     type: "executives"
   },
   {
@@ -63,15 +65,15 @@ const teamMembers = [
     type: "Technical Heads"
   },
   {
-    name: "Dev Mehta",
+    name: "Rudra",
     position: "Competitive Programming Head",
-    imgsrc: "/CommittePhotos/CP/Dev_Mehta.jpg",
+    imgsrc: "/CommittePhotos/CP/rudra cp.jpeg",
     type: "Technical Heads"
   },
   {
-    name: "Varun Iyer",
+    name: "Jay Goti",
     position: "Competitive Programming Head",
-    imgsrc: "/CommittePhotos/CP/Varun_Iyer.jpg",
+    imgsrc: "/CommittePhotos/CP/jay goti.jpeg",
     type: "Technical Heads"
   },
   {
@@ -155,7 +157,7 @@ const teamMembers = [
 ];
 export { teamMembers };
 
-export function TeamCard({ imgsrc = "https://links.aryanranderiya.com/l/default_user", name, position }) {
+export function TeamCard({ imgsrc = "https://links.aryanranderiya.com/l/default_user", name, position, scale = 1.15 }) {
   const cardRef = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -181,10 +183,13 @@ export function TeamCard({ imgsrc = "https://links.aryanranderiya.com/l/default_
         visible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <img
-        src={imgsrc}
-        className="w-[170px] h-[170px] min-w-[170px] min-h-[170px] max-h-[170px] rounded-full object-cover scale-90"
-      />
+      <div className="w-[150px] h-[150px] min-w-[150px] min-h-[150px] max-h-[150px] rounded-full overflow-hidden flex justify-center items-center">
+        <img
+          src={imgsrc}
+          style={{ imageRendering: "-webkit-optimize-contrast", transform: `translateZ(0) scale(${scale})` }}
+          className="w-full h-full object-cover"
+        />
+      </div>
       <div className="flex flex-col items-center">
         <span className="text-2xl helvetica text-center ">{name}</span>
         <span className="text-lg text-foreground-400 minecraft text-wrap w-[200px] text-center">
@@ -242,6 +247,7 @@ export default function TeamPage() {
                     position={member.position}
                     imgsrc={member.imgsrc}
                     type={member.type}
+                    scale={member.scale}
                   />
                 ))}
               </div>
