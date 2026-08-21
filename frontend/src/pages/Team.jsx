@@ -49,7 +49,7 @@ const teamMembers = [
   {
     name: "Aayush Parekh",
     position: "Web Development Head",
-    imgsrc: "/CommittePhotos/WebDev/aayush.jpeg",
+    imgsrc: "/CommittePhotos/WebDev/aayush.png",
     type: "Technical Heads"
   },
   {
@@ -95,63 +95,77 @@ const teamMembers = [
     type: "Technical Heads"
   },
   {
-    name: "Anoushka Aithal",
+    name: "Shatakshi",
     position: "Content & Documentation Head",
-    imgsrc: "/CommittePhotos/CD/Anoushka_Aithal.jpeg",
+    imgsrc: "/CommittePhotos/CD/shatakshi_CnD.jpg",
     type: "non-Technical Heads"
   },
   {
-    name: "Vidhi Sheth",
+    name: "Devarsh",
     position: "Content & Documentation Head",
-    imgsrc: "/CommittePhotos/CD/VIDHI_SHETH.png",
+    imgsrc: "/CommittePhotos/CD/devarsh.jpg",
     type: "non-Technical Heads"
   },
   {
-    name: "Laksh Parekh",
+    name: "Pratham",
     position: "Event Management & Logistics Head",
-    imgsrc: "/CommittePhotos/EM/Laksh_Parekh.jpg",
-    type: "non-Technical Heads"
+    imgsrc: "/CommittePhotos/EM/pratham.jpg",
+    type: "non-Technical Heads",
+    objectPosition: "center top"
   },
-    {
-    name: "Bhavya Jain",
+  {
+    name: "Hanisha",
     position: "Event Management & Logistics Head",
-    imgsrc: "/CommittePhotos/EM/bhavya.jpeg",
+    imgsrc: "/CommittePhotos/EM/hanisha.jpg",
     type: "non-Technical Heads"
   },
   {
-    name: "Kunjan Panchal",
+    name: "Chintan",
     position: "Graphic Design Head",
-    imgsrc: "/CommittePhotos/GD/Kunjan.jpg",
-    type: "non-Technical Heads"
+    imgsrc: "/CommittePhotos/GD/chintan_gd.jpg",
+    type: "non-Technical Heads",
+    objectPosition: "center top"
   },
   {
-    name: "Yug Brahmbhatt",
+    name: "Riya Shah",
     position: "Graphic Design Head",
-    imgsrc: "/CommittePhotos/GD/Yug_Brahmbhatt.jpeg",
+    imgsrc: "/CommittePhotos/GD/riyashah.jpg",
     type: "non-Technical Heads"
   },
   {
-    name: "Dhwani Bhut",
-    position: "Social Media Head",
-    imgsrc: "/CommittePhotos/SM/Dhwani_Bhut.jpeg",
+    name: "Dhyanaa",
+    position: "Coverage Head",
+    imgsrc: "/CommittePhotos/COV/dhyanaa_cov.jpg",
     type: "non-Technical Heads"
   },
   {
-    name: "Worship Sharma",
-    position: "Social Media Head",
-    imgsrc: "/CommittePhotos/SM/worship.jpg",
+    name: "Yashita",
+    position: "Coverage Head",
+    imgsrc: "/CommittePhotos/COV/yashita.JPG",
     type: "non-Technical Heads"
   },
   {
-    name: "Aarav Patel",
+    name: "Swara",
     position: "Publicity Head",
-    imgsrc: "/CommittePhotos/PR/Aarav_Patel.jpeg",
+    imgsrc: "/CommittePhotos/PR/swara.jpg",
     type: "non-Technical Heads"
   },
   {
-    name: "Reyan Doshi",
+    name: "Vaishvi",
     position: "Publicity Head",
-    imgsrc: "/CommittePhotos/PR/Reyan_Doshi.jpg",
+    imgsrc: "/CommittePhotos/PR/Vaishvi_publicity_2.png",
+    type: "non-Technical Heads"
+  },
+  {
+    name: "Pranshu",
+    position: "Video Editing Head",
+    imgsrc: "/CommittePhotos/VE/Pranshu_VE.jpg",
+    type: "non-Technical Heads"
+  },
+  {
+    name: "Tejash",
+    position: "Video Editing Head",
+    imgsrc: "/CommittePhotos/VE/Tejash_VE.jpg",
     type: "non-Technical Heads"
   }
 ];
