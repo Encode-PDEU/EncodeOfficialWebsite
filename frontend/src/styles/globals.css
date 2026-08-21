@@ -102,7 +102,9 @@ body {
 
 .card {
   height: 300px;
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
+  min-width: 150px;
   display: grid;
   place-items: center;
 }

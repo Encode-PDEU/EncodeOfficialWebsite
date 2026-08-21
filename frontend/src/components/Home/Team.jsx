@@ -8,37 +8,39 @@ import twitter from '../../images/white-twitter.png';
 
 const executives = [
   {
-    name: "Axat Vaghela",
+    name: "Anoushka Aithal",
     position: "President",
-    imgsrc: "/CommittePhotos/Execs/Axat_Vaghela.jpeg",
+    imgsrc: "/CommittePhotos/Execs/anoushka.jpg",
     type: "executives",
     links: ["", "", ""], 
+    scale: 1.35,
   },
   {
-    name: "Nemil Shah",
+    name: "Laksh Parekh",
     position: "Vice President",
-    imgsrc: "/CommittePhotos/Execs/Nemil_Shah.jpeg",
+    imgsrc: "/CommittePhotos/Execs/laksh.jpg",
     type: "executives",
     links: ["", "", ""],
   },
   {
-    name: "Aayush Khandelwal",
+    name: "Aarav Patel",
     position: "Treasurer",
-    imgsrc: "/CommittePhotos/Execs/Aayush_Khandelwal.jpg",
+    imgsrc: "/CommittePhotos/Execs/aarav.jpg",
     type: "executives",
     links: ["", "", ""],
+    scale: 1.35,
   },
   {
-    name: "Mokshal Shah",
+    name: "Hitarth Bhatt",
     position: "Above Tech Co-Ordinator",
-    imgsrc: "/CommittePhotos/Execs/Mokshal_Shah.jpeg",
+    imgsrc: "/CommittePhotos/Execs/Hitarth Bhatt.jpg",
     type: "executives",
     links: ["", "", ""],
   },
   {
-    name: "Parth Panot",
+    name: "Aditya Dalal",
     position: "Technical Co-Ordinator",
-    imgsrc: "/CommittePhotos/Execs/Parth_Panot.jpg",
+    imgsrc: "/CommittePhotos/Execs/aditya_techcoord.jpg",
     type: "executives",
     links: ["", "", ""],
   },
@@ -56,6 +58,7 @@ export function TeamCard({
   about = "No description available",
   links = [], // ✅ default empty array
   position,
+  scale = 1.15,
 }) {
   const cardRef = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -86,10 +89,13 @@ export function TeamCard({
       <div className="card-inner bg-[#00ff7b] bg-opacity-15">
         {/* FRONT */}
         <div className="card-front" onClick={() => flipCard(id)}>
-          <img
-            src={imgsrc}
-            className="w-[170px] h-[170px] min-w-[170px] min-h-[170px] max-h-[170px] rounded-full"
-          />
+          <div className="w-[140px] h-[140px] min-w-[140px] min-h-[140px] max-h-[140px] rounded-full overflow-hidden flex justify-center items-center">
+            <img
+              src={imgsrc}
+              style={{ imageRendering: "-webkit-optimize-contrast", transform: `translateZ(0) scale(${scale})` }}
+              className="w-full h-full object-cover"
+            />
+          </div>
           <div className="flex flex-col items-center">
             <span className="text-2xl helvetica">{name}</span>
             <span className="text-lg text-foreground-400 minecraft text-wrap w-[200px] text-center">
@@ -149,7 +155,7 @@ export default function Team() {
         </span>
       </div>
 
-      <div className="flex flex-wrap gap-3 md:max-w-[90vw] justify-center mb-4">
+      <div className="flex flex-wrap sm:flex-nowrap gap-3 md:max-w-[90vw] w-full justify-center mb-4">
         {executives.map((member, index) => (
           <TeamCard
             key={index}
@@ -160,6 +166,7 @@ export default function Team() {
             type={member.type}
             about={member.about}
             links={member.links}
+            scale={member.scale}
           />
         ))}
       </div>

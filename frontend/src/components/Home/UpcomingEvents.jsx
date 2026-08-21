@@ -216,7 +216,7 @@ export default function UpcomingEvents() {
     ];
 
     useEffect(() =>{
-        const res = DBService.getAllEvents().then((obj) => setEventData(obj))
+        const res = DBService.getAllEvents().then((obj) => setEventData(obj || []))
     }, [])
 
     return (
